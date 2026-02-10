@@ -69,8 +69,7 @@ What is the **estimated amount** of data that will be read when this query is ex
 Write a query to retrieve the PULocationID from the table (not the external table) in BigQuery. Now write a query to retrieve the PULocationID and DOLocationID on the same table.
 
 Why are the estimated number of Bytes different?  
-✅ - BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires 
-reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed.
+✅ - BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed.  
 - BigQuery duplicates data across multiple storage partitions, so selecting two columns instead of one requires scanning the table twice, 
 doubling the estimated bytes processed.
 - BigQuery automatically caches the first queried column, so adding a second column increases processing time but does not affect the estimated bytes scanned.
@@ -106,8 +105,8 @@ Use the materialized table you created earlier in your from clause and note the 
 Choose the answer which most closely matches.
  
 
-- 12.47 MB for non-partitioned table and 326.42 MB for the partitioned table
-✅ - 310.24 MB for non-partitioned table and 26.84 MB for the partitioned table
+- 12.47 MB for non-partitioned table and 326.42 MB for the partitioned table  
+✅ - 310.24 MB for non-partitioned table and 26.84 MB for the partitioned table  
 - 5.87 MB for non-partitioned table and 0 MB for the partitioned table
 - 310.31 MB for non-partitioned table and 285.64 MB for the partitioned table
 
@@ -117,14 +116,14 @@ Choose the answer which most closely matches.
 Where is the data stored in the External Table you created?
 
 - Big Query
-- Container Registry
-✅ - GCP Bucket
+- Container Registry  
+✅ - GCP Bucket  
 - Big Table
 
 ## Question 8. Clustering best practices
 
 It is best practice in Big Query to always cluster your data:
-- True
+- True  
 ✅ - False
 
 
